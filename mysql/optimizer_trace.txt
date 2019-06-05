@@ -1,0 +1,7 @@
+1、查看是否开启
+show VARIABLES like 'optimizer_trace';
+2、在当前会话设置为开启
+会影响20%的性能
+set SESSION optimizer_trace='enabled=on',end_markers_in_json=on;
+select trace from information_schema.OPTIMIZER_TRACE;
+
